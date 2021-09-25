@@ -1,0 +1,13 @@
+:root {
+  --primary-text-color: #212121;
+  --secondary-text-color: #757575;
+  --accent-color: #2196f3fb;
+  --primary-white-color: #ffffff;
+  --primary-link-color: #afb1b8;
+  --projects-list-gap: 30px;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: var(--primary-text-color);
+}
