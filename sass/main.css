@@ -203,6 +203,45 @@ img {
   fill: var(--accent-color);
 }
 
+.hero {
+  background-color: #2f303a;
+  text-align: center;
+  padding-top: 118px;
+  padding-bottom: 118px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/img-min.jpg);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/img-min.jpg);
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.hero__heading {
+  margin-bottom: 30px;
+  font-family: Roboto;
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 1.62;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--primary-white-color);
+}
+
+.hero__btn {
+  padding: 10px 32px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  background-color: var(--accent-color);
+  color: var(--primary-white-color);
+  border-radius: 4px;
+  border: hidden;
+  cursor: pointer;
+}
+
 .btn {
   cursor: pointer;
   border: none;
