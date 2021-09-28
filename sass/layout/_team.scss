@@ -6,20 +6,49 @@
   margin-bottom: 50px;
 
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
+  // font-size: 36px;
+  font-size: 28px;
+  // line-height: 1.17;
+  line-height: calc(33 / 28);
   letter-spacing: 0.03em;
 }
 
 .team__list {
-  display: flex;
-}
-
-.team__list .team__item + {
-  .team__item {
-    margin-left: 30px;
+  //   display: flex;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
   }
 }
+
+.team__item {
+  &:not(last-child) {
+    margin-bottom: 30px;
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: unset;
+    flex-basis: calc((100% - 4 * 15px) / 2);
+    margin: 15px;
+  }
+}
+
+.team__photo {
+  width: 450px;
+  height: 460px;
+
+  @media screen and (min-width: 768px) {
+    width: 354px;
+    height: 536px;
+  }
+}
+
+// .team__list .team__item + {
+//   .team__item {
+//     margin-left: 30px;
+//   }
+// }
 
 .employees {
   background-color: #ffffff;
