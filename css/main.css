@@ -211,7 +211,7 @@ img {
   text-align: center;
   padding-top: 118px;
   padding-bottom: 118px;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero-img.jpg);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero-img-mob-min.jpg);
   max-width: 1600px;
   margin: 0 auto;
   background-repeat: no-repeat;
@@ -220,25 +220,25 @@ img {
 
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .hero .hero {
-    background-image: url("../images/hero/hero-img2x.jpg");
+    background-image: url("../images/hero/hero-img-mob2x-min.jpg");
   }
 }
 
 @media screen and (min-width: 768px) {
   .hero {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero-img-tabl.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero-img-tabl-min.jpg);
   }
 }
 
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
   .hero {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero-img-tabl2x.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero-img-tabl2x-min.jpg);
   }
 }
 
 @media screen and (min-width: 1200px) {
   .hero {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero-img-desk.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero-img-desk-min.jpg);
     height: 600px;
     padding-top: 200px;
     padding-bottom: 200px;
@@ -247,7 +247,7 @@ img {
 
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .hero {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero-img-desk2x.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero-img-desk2x-min.jpg);
   }
 }
 
@@ -416,11 +416,19 @@ img {
 }
 
 .team__heading {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   font-weight: 700;
   font-size: 28px;
   line-height: calc(33 / 28);
   letter-spacing: 0.03em;
+}
+
+@media screen and (min-width: 1200px) {
+  .team__heading {
+    margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 1.17;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -428,6 +436,12 @@ img {
     display: flex;
     flex-wrap: wrap;
     margin: -15px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .team__list {
+    flex-wrap: unset;
   }
 }
 
@@ -443,15 +457,9 @@ img {
   }
 }
 
-.team__photo {
-  width: 450px;
-  height: 460px;
-}
-
-@media screen and (min-width: 768px) {
-  .team__photo {
-    width: 354px;
-    height: 536px;
+@media screen and (min-width: 1200px) {
+  .team__item {
+    flex-basis: calc((100% - 8 * 15px) / 4);
   }
 }
 
@@ -487,28 +495,48 @@ img {
 }
 
 .clients__heading {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   font-family: Roboto;
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
+  font-size: 28px;
+  line-height: 1.18;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
 }
 
+@media screen and (min-width: 1200px) {
+  .clients__heading {
+    margin-bottom: 50px;
+  }
+}
+
 .clients__list {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+  margin: -15px;
 }
 
 .clients__item {
-  width: 170px;
+  width: 210px;
   height: 92px;
+  flex-basis: calc((100% - 4 * 15px) / 2);
+  margin: 15px;
 }
 
-.clients__item:not(:last-child) {
-  margin-right: 30px;
+@media screen and (min-width: 768px) {
+  .clients__item {
+    width: 226px;
+    flex-basis: calc((100% - 6 * 15px) / 3);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .clients__item {
+    width: 170px;
+    flex-basis: calc((100% - 12 * 15px) / 6);
+  }
 }
 
 .clients__icon {
@@ -535,13 +563,14 @@ img {
 }
 
 .footer__left {
-  margin-right: 70px;
+  margin-bottom: 60px;
 }
 
 .footer__logo {
   display: block;
   margin-bottom: 20px;
   color: var(--primary-white-color);
+  text-align: center;
 }
 
 .footer-span__logo {
@@ -550,7 +579,8 @@ img {
 
 .map {
   display: block;
-  margin-bottom: 9px;
+  margin-bottom: 8px;
+  text-align: center;
   color: var(--primary-white-color);
   font-style: normal;
   font-size: 14px;
@@ -560,7 +590,13 @@ img {
 
 .footer__mail {
   display: block;
-  margin-bottom: 9px;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.footer__tel {
+  display: block;
+  text-align: center;
 }
 
 .footer__mail,
@@ -573,13 +609,9 @@ img {
   letter-spacing: 0.02em;
 }
 
-.footer .container {
-  display: flex;
-  align-items: baseline;
-}
-
 .footer__heading {
   margin-bottom: 20px;
+  text-align: center;
   font-family: Roboto;
   font-weight: 700;
   font-size: 14px;
@@ -589,8 +621,13 @@ img {
   color: var(--primary-white-color);
 }
 
+.footer__right {
+  margin-bottom: 60px;
+}
+
 .footer__socials {
   display: flex;
+  justify-content: center;
 }
 
 .footer__socials-item:not(:last-child) {
@@ -613,18 +650,11 @@ img {
   background-color: var(--accent-color);
 }
 
-.mailing__form {
-  display: flex;
-}
-
-.mailing {
-  margin-left: auto;
-}
-
 .mailing__heading {
   display: block;
   margin-top: 15px;
   margin-bottom: 20px;
+  text-align: center;
   font-family: Roboto;
   font-weight: 700;
   font-size: 14px;
@@ -636,7 +666,8 @@ img {
 
 .mailing__input {
   display: inline-block;
-  min-width: 358px;
+  width: 100%;
+  margin-bottom: 20px;
   height: 50px;
   background-color: #2196f300;
   padding-left: 16px;
@@ -665,7 +696,7 @@ img {
   justify-content: center;
   width: 200px;
   height: 50px;
-  margin-left: 12px;
+  margin: 0 auto;
   padding: 10px 28px;
   font-weight: 700;
   font-size: 16px;
@@ -899,6 +930,10 @@ img {
 .employees-socials__item {
   width: 44px;
   height: 44px;
+}
+
+.employees-socials__item:not(:last-child) {
+  margin-right: 10px;
 }
 
 .employees-socials__link {
