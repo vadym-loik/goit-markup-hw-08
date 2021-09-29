@@ -22,7 +22,7 @@
   </head>
   <body>
     <!-- HEADER -->
-    <!-- <header class="header">
+    <header class="header">
       <div class="container">
         <nav class="navigation">
           <a href="/" lang="en" class="logo"><span class="span-logo">Web</span>Studio</a>
@@ -55,8 +55,41 @@
             >
           </li>
         </ul>
+
+        <button class="menu-open" data-menu-open>
+          <svg class="menu-burger" width="44" height="44">
+            <use href="./images/sprite.svg#icon-menu"></use>
+          </svg>
+        </button>
       </div>
-    </header> -->
+      <div class="mob-menu is-hidden" data-menu>
+        <button class="menu-close" data-menu-close>
+          <svg class="menu-cross" width="44" height="44">
+            <use href="./images/sprite.svg#icon-menu-close"></use>
+          </svg>
+        </button>
+        <ul class="mob-menu__list list">
+          <li class="mob-menu__item">
+            <a class="mob-menu__link link current" href="./index.html">Студия</a>
+          </li>
+          <li class="mob-menu__item">
+            <a class="mob-menu__link link" href="./portfolio.html">Портфолио</a>
+          </li>
+          <li class="mob-menu__item">
+            <a class="mob-menu__link link" href="">Контакты</a>
+          </li>
+        </ul>
+
+        <ul class="mob-menu__contacts list">
+          <li class="mob-menu__сontact-details">
+            <a class="mob-menu__tel link" href="tel:+380961111111">+38 096 111 11 11</a>
+          </li>
+          <li class="mob-menu__сontact-details">
+            <a class="mob-menu__mail link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+          </li>
+        </ul>
+      </div>
+    </header>
 
     <!-- MAIN -->
     <main class="">
@@ -654,5 +687,6 @@
     </div>
 
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
