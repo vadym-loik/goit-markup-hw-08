@@ -1,9 +1,6 @@
 .header {
   background-color: var(--primary-white-color);
   border-bottom: 1px solid #ececec;
-
-  // padding-top: 16px;
-  // padding-bottom: 16px;
 }
 
 .header {
@@ -37,15 +34,15 @@
   line-height: 1.14;
   letter-spacing: 0.02em;
 
+  position: relative;
+
   &:not(:last-child) {
     margin-right: 50px;
   }
 }
 
 .header__link {
-  padding-top: 32px;
-  padding-bottom: 34px;
-  position: relative;
+  display: block;
 }
 
 .current {
@@ -54,11 +51,11 @@
   @media screen and (min-width: 768px) {
     &::after {
       content: '';
-      display: block;
       background: #2196f3;
       height: 4px;
       border-radius: 2px;
-      bottom: 0;
+      left: 0;
+      bottom: -1px;
       width: 100%;
       position: absolute;
     }
@@ -94,7 +91,6 @@
 
 .header__contacts {
   display: flex;
-  align-items: left;
 
   @media screen and (min-width: 1200px) {
     & .header__сontact-details + {
