@@ -121,12 +121,18 @@ img {
 
 .header__list {
   display: flex;
-  margin-left: 93px;
+  margin-left: 88px;
 }
 
 @media screen and (max-width: 767px) {
   .header__list {
     display: none;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header__list {
+    margin-left: 93px;
   }
 }
 
