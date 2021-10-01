@@ -1232,6 +1232,12 @@ img {
   flex-grow: 1;
 }
 
+@media screen and (min-width: 1200px) {
+  .projects-content {
+    flex-grow: unset;
+  }
+}
+
 .filters-list {
   display: flex;
   flex-wrap: wrap;
