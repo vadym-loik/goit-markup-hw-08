@@ -1373,6 +1373,7 @@ img {
 
 .mob-menu__socials {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .mob-menu__socials-link {
@@ -1387,12 +1388,12 @@ img {
 }
 
 .mob-menu__socials-item:not(:last-child) {
-  padding-right: 3px;
+  padding-right: 4px;
   border-right: 1px solid rgba(33, 33, 33, 0.2);
 }
 
 .mob-menu__socials-item:not(:first-child) {
-  padding-left: 3px;
+  padding-left: 4px;
 }
 
 @media screen and (min-width: 480px) {
