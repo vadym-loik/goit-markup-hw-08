@@ -1256,6 +1256,12 @@ img {
 @media screen and (min-width: 768px) {
   .filters-list {
     justify-content: center;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .filters-list {
     margin-bottom: 50px;
   }
 }
